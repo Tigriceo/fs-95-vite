@@ -1,0 +1,64 @@
+.benefits-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 80px;
+}
+
+.benefits-list__content {
+  position: relative;
+  padding-left: 40px;
+}
+.benefits-list__content::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  background: url(../img/nft.png) no-repeat center;
+  width: 28px;
+  height: 28px;
+}
+.benefits-list__image {
+  margin-bottom: 18px;
+  padding-left: 0;
+  max-width: 396px;
+  max-height: 596px;
+}
+@media screen and (min-width: 1280px) {
+  .benefits-list {
+    flex-direction: row;
+    gap: 80px;
+    margin-top: 141px;
+  }
+  .benefits-list__item {
+    flex-basis: calc(50% - 80px);
+  }
+  .benefits-list__image {
+    flex-basis: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .benefits-list__content {
+    max-width: 260px;
+  }
+  /* odd even */
+  .benefits-list__item:nth-child(odd) .benefits-list__content {
+    margin-left: auto;
+  }
+}
+.benefits-list__image::before {
+  content: none;
+}
+.benefits-list__title {
+  line-height: 1.5;
+  margin-bottom: 13px;
+}
+.benefits-list__subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
